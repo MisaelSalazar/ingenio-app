@@ -1,8 +1,23 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Header from "../components/Header";
 import BottomNav from "../components/BottomNav";
 import Card from "../components/Card";
 
 function Home() {
+    const [flayers, setFlayers] = useState([]);
+    const [busqueda, setBusqueda] = useState("");
+
+    useEffect(() => {
+        axios.get("https://green-goldfish-952011.hostingersite.com/ingenio-backend/flayers/get_all.php")
+            .then(res => setFlayers(res.data))
+            .catch(err => console.error(err));
+    }, []);
+
+    const flayersFiltrados = flayers.filter(flayer =>
+        flayer.titulo.toLowerCase().includes(busqueda.toLowerCase())
+    );
+
     return (
         <>
             <Header
@@ -11,11 +26,12 @@ function Home() {
                 mostrarRetorno={false}
                 link={""}
                 mostrarMenu={true}
-            ></Header>
+            />
+
             <div className="row">
                 <div className="col s1"></div>
                 <div className="col s10">
-                    <h4 style={{ fontWeight: "bold" }}>Hola [Name], que novedades hay?</h4>
+                    <h4 style={{ fontWeight: "bold" }}>Hola, ¿qué novedades hay?</h4>
                 </div>
                 <div className="col s1"></div>
             </div>
@@ -23,17 +39,21 @@ function Home() {
             <div className="row">
                 <div className="col s1"></div>
                 <div className="col s10">
-                    <form action="" className="input-field">
+                    <form className="input-field" onSubmit={e => e.preventDefault()}>
                         <div className="row">
-                            <div class="input-field col s9">
-                                <input id='numero' className='validate' type="text" />
-                                <label for="numero">
-                                    Buscar:
-                                </label>
+                            <div className="input-field col s9">
+                                <input
+                                    id="busqueda"
+                                    className="validate"
+                                    type="text"
+                                    value={busqueda}
+                                    onChange={(e) => setBusqueda(e.target.value)}
+                                />
+                                <label htmlFor="busqueda">Buscar:</label>
                             </div>
                             <div className="col s2">
-                                <button class="btn green" type="submit" name="" style={{ marginTop: '1.5rem' }}>
-                                    <i class="material-icons">search</i>
+                                <button className="btn green" style={{ marginTop: '1.5rem' }}>
+                                    <i className="material-icons">search</i>
                                 </button>
                             </div>
                         </div>
@@ -43,17 +63,21 @@ function Home() {
             </div>
 
             <div className="row" style={{ marginLeft: '2rem' }}>
-                <div className="col s11 m5">
-                    <Card></Card>
-                </div>
-                <div className="col s11 m5">
-                    <Card></Card>
-                </div>
+                {flayersFiltrados.map(flayer => (
+                    <div key={flayer.id} className="col s11 m5">
+                        <Card
+                            titulo={flayer.titulo}
+                            imagen={`https://green-goldfish-952011.hostingersite.com/ingenio-backend/${flayer.imagen}`}
+                            slug={flayer.slug}
+                        />
+                    </div>
+                ))}
             </div>
+
             <br /><br />
-            <BottomNav></BottomNav>
+            <BottomNav />
         </>
-    )
+    );
 }
 
-export default Home
+export default Home;

@@ -1,26 +1,23 @@
-import logo from '../assets/img/logo.jpg';
+import { Link } from "react-router-dom";
 
-function Card() {
-
+function Card({ titulo, imagen, slug }) {
     return (
-        <>
-            <div className="card">
-                <div className="card-image">
-                    <img src={logo} />
-                    <a className="btn-floating halfway-fab waves-effect waves-light red">
-                        <i class="material-icons">favorite_border</i>
-                    </a>
-                </div>
-                <div className="card-content">
-                    <span className="card-title">Card Title</span>
-                    {/* <p>I am a very simple card.to use effectively.</p> */}
-                </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                </div>
+        <div className="card">
+            <div className="card-image">
+                <img src={imagen} alt={titulo} />
+                <a className="btn-floating halfway-fab waves-effect waves-light red">
+                    <i className="material-icons">favorite</i>
+                </a>
             </div>
-        </>
-    )
-
+            <div className="card-content">
+                <span className="card-title">
+                    <Link to={`/flayer/${slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                        {titulo}
+                    </Link>
+                </span>
+            </div>
+        </div>
+    );
 }
-export default Card
+
+export default Card;
