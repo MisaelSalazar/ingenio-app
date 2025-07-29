@@ -1,12 +1,14 @@
-# React + Vite
+# 📱 Ingenio App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Ingenio App** es una aplicación web progresiva (PWA) desarrollada en **React**, diseñada para el **personal sindicalizado del Ingenio Plan de Ayala**. A través de esta plataforma, los trabajadores pueden acceder fácilmente a **flayers**, **noticias** y **comunicados oficiales** publicados por el área de **Recursos Industriales** mediante el panel administrativo **Ingenio Dashboard**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧩 Rol en el ecosistema
 
-## Expanding the ESLint configuration
+Esta app forma parte de un sistema de comunicación interna que se compone de tres partes:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+[ingenio-dashboard] <==> [ingenio-backend] ==> [ingenio-app]
+      (Administración)         (API REST)         (Visualización)
+```
