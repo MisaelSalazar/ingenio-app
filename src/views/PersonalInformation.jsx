@@ -15,28 +15,28 @@ function PersonalInformation() {
                 <div className="col s1"></div>
                 <div className="col s10">
                     <h5 style={{ fontWeight: "bold" }}>Nombre completo:</h5>
-                    <h6>[Nombre]</h6>
+                    <h6>Empleado de prueba</h6>
                 </div>
             </div>
             <div className="row">
                 <div className="col s1"></div>
                 <div className="col s10">
                     <h5 style={{ fontWeight: "bold" }}>Número del trabajador:</h5>
-                    <h6>[Número]</h6>
+                    <h6>152034</h6>
                 </div>
             </div>
             <div className="row">
                 <div className="col s1"></div>
                 <div className="col s10">
                     <h5 style={{ fontWeight: "bold" }}>Puesto:</h5>
-                    <h6>[Puesto]</h6>
+                    <h6>Operador de Molino</h6>
                 </div>
             </div>
             <div className="row">
                 <div className="col s1"></div>
                 <div className="col s10">
                     <h5 style={{ fontWeight: "bold" }}>Area:</h5>
-                    <h6>[Area]</h6>
+                    <h6>Producción</h6>
                 </div>
             </div>
         </>
