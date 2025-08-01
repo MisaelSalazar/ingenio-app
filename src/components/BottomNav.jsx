@@ -13,7 +13,7 @@ function BottomNav() {
         >
             <div className="row" style={{ margin: 0, paddingTop: '0.5rem', paddingBottom: '0.5rem' }}>
 
-                <div className="col s4 center-align">
+                <div className="col s6 center-align">
                     <Link to="/inicio" className="white-text">
                         <i className="material-icons">home</i>
                         <br />
@@ -21,7 +21,7 @@ function BottomNav() {
                    </Link>
                 </div>
 
-                <div className="col s4 center-align">
+                <div className="col s6 center-align">
                     <Link className="white-text" to="/guardado">
 
                         <i className="material-icons">favorite</i>
@@ -31,13 +31,13 @@ function BottomNav() {
                     </Link>
                 </div>
 
-                <div className="col s4 center-align">
+                {/* <div className="col s4 center-align">
                     <a href="#" className="white-text">
                         <i className="material-icons">tune</i>
                         <br />
                         <span style={{ fontSize: '0.75rem' }}>Filtros</span>
                     </a>
-                </div>
+                </div> */}
             </div>
         </div>
     );

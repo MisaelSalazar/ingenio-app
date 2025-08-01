@@ -19,7 +19,7 @@ function User() {
                     style={{ fontSize: '11rem' }}
                 >account_circle</i>
 
-                <h4 style={{ fontWeight: "bold" }}>[Nombre]</h4>
+                <h4 style={{ fontWeight: "bold" }}>Empleado de prueba</h4>
 
                 <br />
             </center>

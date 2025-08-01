@@ -12,10 +12,10 @@ function Notification() {
                 link={"/usuario"}
             ></Header>
             <br />
-            <Notifi content={"Esta es una notificacion"}></Notifi>
-            <Notifi content={"Esta es una notificacion"}></Notifi>
-            <Notifi content={"Esta es una notificacion"}></Notifi>
-            <Notifi content={"Esta es una notificacion"}></Notifi>
+            <Notifi content={"🎉 Festejo del Día del Trabajador: viernes 16 en el área de eventos."}></Notifi>
+            <Notifi content={"🧯 Simulacro de evacuación programado para el jueves 8 de agosto."}></Notifi>
+            <Notifi content={"💡 Evita dejar encendido el equipo al finalizar tu turno."}></Notifi>
+            {/* <Notifi content={"Esta es una notificacion"}></Notifi> */}
         </>
     )
 }
