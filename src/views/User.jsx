@@ -24,11 +24,11 @@ function User() {
                 <br />
             </center>
 
-            <HrLink
+            {/* <HrLink
                 text="Información Personal"
                 icon="face"
                 link="/informacion_personal"
-            ></HrLink>
+            ></HrLink> */}
             <HrLink
                 text="Notificaciones"
                 icon="notifications"
